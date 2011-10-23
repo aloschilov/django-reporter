@@ -1,0 +1,23 @@
+<html>
+<body>
+<table width='100%'>
+
+<tr>
+<td colspan={{ column_count }}>{{ report_name }}</td>
+</tr>
+
+<tr>
+{% for column_header in column_headers %}
+<th>{{column_header}}</th>
+{% endfor %}
+</tr>
+{% for data_item in data %}
+    <tr>
+    {% for cell_content in data_item %}
+    <td>{{ cell_content }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
